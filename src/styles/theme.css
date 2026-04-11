@@ -1,0 +1,50 @@
+/* ============================================================
+   GLOBAL THEME — edit this file to restyle the entire site
+   ============================================================ */
+:root {
+  /* --- Backgrounds --- */
+  --bg-primary:    #0a0a0f;
+  --bg-secondary:  #0d1117;
+  --bg-card:       #161b22;
+  --bg-card-hover: #1c2330;
+
+  /* --- Accent Colors --- */
+  --accent-primary:   #00d4ff;
+  --accent-secondary: #7c3aed;
+  --accent-glow:      rgba(0, 212, 255, 0.15);
+
+  /* --- Text --- */
+  --text-primary:   #e2e8f0;
+  --text-secondary: #8b949e;
+  --text-muted:     #484f58;
+
+  /* --- Borders --- */
+  --border-color:   #30363d;
+  --border-accent:  rgba(0, 212, 255, 0.4);
+
+  /* --- Typography --- */
+  --font-primary: 'Inter', 'Segoe UI', sans-serif;
+  --font-mono:    'Fira Code', 'Cascadia Code', monospace;
+
+  /* --- Spacing --- */
+  --section-padding: 90px 0;
+  --container-max:   1200px;
+  --container-px:    24px;
+
+  /* --- Border Radius --- */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  /* --- Shadows --- */
+  --shadow-card:  0 4px 24px rgba(0, 0, 0, 0.4);
+  --shadow-glow:  0 0 20px rgba(0, 212, 255, 0.2);
+
+  /* --- Transitions --- */
+  --transition:      all 0.3s ease;
+  --transition-fast: all 0.15s ease;
+
+  /* --- Navbar --- */
+  --navbar-height: 64px;
+  --navbar-bg:     rgba(10, 10, 15, 0.85);
+}
