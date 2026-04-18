@@ -3,17 +3,17 @@ import { NavLink } from 'react-router-dom';
 import './Navbar.css';
 
 const links = [
-  { to: '/',        label: 'Home'     },
-  { to: '/about',   label: 'About'    },
-  { to: '/resume',  label: 'Resume'   },
-  { to: '/projects',label: 'Projects' },
-  { to: '/hobbies', label: 'Hobbies'  },
-  { to: '/contact', label: 'Contact'  },
+  { to: '/',         label: 'Home'     },
+  { to: '/about',    label: 'About'    },
+  { to: '/resume',   label: 'Resume'   },
+  { to: '/projects', label: 'Projects' },
+  { to: '/hobbies',  label: 'Hobbies'  },
+  { to: '/contact',  label: 'Contact'  },
 ];
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled,  setScrolled]  = useState(false);
+  const [menuOpen,  setMenuOpen]  = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -42,6 +42,11 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
+
+        <NavLink to="/contact" className="nav-cta" onClick={() => setMenuOpen(false)}>
+          <span className="nav-cta-dot" />
+          Open to Work
+        </NavLink>
 
         <button
           className={`hamburger ${menuOpen ? 'open' : ''}`}

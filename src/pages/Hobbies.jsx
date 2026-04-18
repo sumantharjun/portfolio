@@ -31,6 +31,7 @@ const hobbies = [
     title: 'Sports',
     desc:  'Enthusiastic about badminton and cricket — staying active, building connections, and enjoying the spirit of the game.',
     tags:  ['Badminton', 'Cricket', 'Fitness'],
+    link:  { label: 'Find me on Playo', href: 'https://playo.co/profile/0858f464-6218-4fd4-a7be-d44888183a63' },
   },
 ];
 

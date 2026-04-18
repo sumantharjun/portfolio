@@ -21,21 +21,74 @@ const certifications = [
   'Katalon Web UI Design',
 ];
 
+const awards = [
+  {
+    title: 'Pinnacle Award',
+    desc:  'Awarded for consistently exceeding project goals and demonstrating exceptional teamwork and impactful contributions at Hexaware.',
+  },
+  {
+    title: 'Hall of Fame',
+    desc:  'Honored for consistent excellence and significant contributions in successfully completing a key project at Hexaware.',
+  },
+  {
+    title: 'Rock Star of the Month (3×)',
+    desc:  'Awarded thrice for outstanding performance, innovation, and contributions to project success.',
+  },
+];
+
+const languages = [
+  { lang: 'English',  level: 'Proficient'  },
+  { lang: 'Telugu',   level: 'Native'       },
+  { lang: 'Hindi',    level: 'Fluent'       },
+  { lang: 'Kannada',  level: 'Intermediate' },
+  { lang: 'Tamil',    level: 'Beginner'     },
+];
+
+const development = [
+  'Regularly attend webinars and explore new concepts in AI, ML, and DSA to stay updated with industry trends.',
+  'Currently gaining hands-on experience in Agentic AI systems using LangChain and experimenting with AI-driven workflows.',
+  'Learning about LLMs, Retrieval-Augmented Generation (RAG), and practical prompt engineering techniques.',
+  'Built a project using the Wav2Lip GenAI model to generate videos from text and image inputs.',
+];
+
 export default function Resume() {
   return (
     <main className="resume-page">
       <div className="container">
-        <div className="page-header">
-          <h1 className="section-title">My <span>Resume</span></h1>
-          <div className="section-line" />
+        <div className="resume-page-header">
+          <div>
+            <h1 className="section-title">My <span>Resume</span></h1>
+            <div className="section-line" />
+          </div>
+          <a
+            href="/Sumanth_Resume.pdf"
+            download="Sumanth_Kolli_Resume.pdf"
+            className="btn btn-primary resume-download-btn"
+          >
+            ⬇ Download Resume
+          </a>
         </div>
+
+        {/* Summary */}
+        <section className="resume-section">
+          <h2 className="resume-section-title">Summary</h2>
+          <div className="card summary-card">
+            <p>
+              Full-stack engineer with <strong>4+ years of experience</strong> building cloud-hosted applications
+              using C# .NET and Python on the backend, React on the frontend, and AWS for infrastructure —
+              including an <strong>AWS Developer Associate</strong> certification. Joined my current project from
+              day one, participating in architecture discussions from the ground up. Over the past five months,
+              moved into an R&amp;D team deepening expertise in <strong>LLMs, RAG pipelines using LangChain,
+              and agentic AI</strong>. Recognised with the Pinnacle Award in 2025 and three Rockstar of the Month awards.
+            </p>
+          </div>
+        </section>
 
         {/* Experience */}
         <section className="resume-section">
           <h2 className="resume-section-title">Work Experience</h2>
           <div className="timeline">
             <div className="timeline-item card">
-              <div className="timeline-dot" />
               <div className="timeline-content">
                 <div className="tl-header">
                   <div>
@@ -101,6 +154,47 @@ export default function Resume() {
             ))}
           </div>
         </section>
+
+        {/* Awards */}
+        <section className="resume-section">
+          <h2 className="resume-section-title">Awards &amp; Recognition</h2>
+          <div className="awards-grid">
+            {awards.map(({ title, desc }) => (
+              <div key={title} className="award-card card">
+                <span className="award-icon">🏆</span>
+                <h3>{title}</h3>
+                <p>{desc}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Professional Development */}
+        <section className="resume-section">
+          <h2 className="resume-section-title">Professional Development</h2>
+          <ul className="dev-list">
+            {development.map((item, i) => (
+              <li key={i} className="dev-item card">
+                <span className="dev-bullet" />
+                <p>{item}</p>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        {/* Languages */}
+        <section className="resume-section">
+          <h2 className="resume-section-title">Languages</h2>
+          <div className="languages-grid">
+            {languages.map(({ lang, level }) => (
+              <div key={lang} className="lang-card card">
+                <span className="lang-name">{lang}</span>
+                <span className="badge">{level}</span>
+              </div>
+            ))}
+          </div>
+        </section>
+
       </div>
     </main>
   );
