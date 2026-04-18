@@ -1,98 +1,85 @@
 import './About.css';
 
-const languages = [
-  { lang: 'English',  level: 'Proficient'   },
-  { lang: 'Telugu',   level: 'Native'        },
-  { lang: 'Hindi',    level: 'Fluent'        },
-  { lang: 'Kannada',  level: 'Intermediate'  },
-  { lang: 'Tamil',    level: 'Beginner'      },
-];
-
-const awards = [
-  {
-    title: 'Pinnacle Award',
-    desc: 'Awarded for consistently exceeding project goals and demonstrating exceptional teamwork and impactful contributions at Hexaware.',
-  },
-  {
-    title: 'Hall of Fame',
-    desc: 'Honored for consistent excellence and significant contributions in successfully completing a key project at Hexaware.',
-  },
-  {
-    title: 'Rock Star of the Month (3x)',
-    desc: 'Awarded thrice for outstanding performance, innovation, and contributions to project success.',
-  },
-];
-
-const development = [
-  'Regularly attend webinars and explore new concepts in AI, ML, and DSA to stay updated with industry trends.',
-  'Currently gaining hands-on experience in Agentic AI systems using LangChain and experimenting with AI-driven workflows.',
-  'Learning about LLMs, Retrieval-Augmented Generation (RAG), and practical prompt engineering techniques.',
-  'Built a project using the Wav2Lip GenAI model to generate videos from text and image inputs.',
-];
-
 export default function About() {
   return (
     <main className="about-page">
       <div className="container">
+
+        {/* ── Header ────────────────────────────────────── */}
         <div className="page-header">
           <h1 className="section-title">About <span>Me</span></h1>
           <div className="section-line" />
         </div>
 
-        {/* Summary */}
-        <div className="about-summary card">
-          <p>
-            Full-Stack Developer with <strong>4+ years of experience</strong> building and deploying scalable
-            web and cloud-native applications using .NET Core, React, REST APIs, SQL, and Azure/AWS Cloud.
-            Skilled in delivering end-to-end solutions including user-facing websites and cloud deployments.
-          </p>
-          <p>
-            Currently expanding expertise in <strong>Generative AI</strong> application development —
-            Azure OpenAI, LLM-based systems, AI agents, RAG architectures, Semantic Kernel, and advanced
-            prompt engineering. Passionate about AI and actively learning Large Language Models (LLMs)
-            and agent-based systems.
-          </p>
+        {/* ── Intro ─────────────────────────────────────── */}
+        <div className="about-hero">
+          <div className="about-photo-wrap">
+            <img src="/sumanth.png" alt="Sumanth Kolli" className="about-photo" />
+            <div className="about-photo-glow" aria-hidden="true" />
+          </div>
+
+          <div className="about-story">
+            <h2 className="about-name">Hey, I'm Sumanth.</h2>
+            <p>
+              I studied Electronics & Communication Engineering — not Computer Science.
+              Got into coding entirely on my own, figured out the web, and by graduation
+              I was already writing React apps and .NET APIs.
+            </p>
+            <p>
+              Hexaware gave me my first real opportunity in 2022 — and I made the most of it.
+              From day one I wasn't just building features, I was in the room for architecture
+              decisions. That exposure is what shaped how I think about building software.
+            </p>
+          </div>
         </div>
 
-        {/* Awards */}
+        {/* ── How I work ────────────────────────────────── */}
         <section className="about-section">
-          <h2 className="sub-title">Awards <span>&</span> Recognition</h2>
-          <div className="awards-grid">
-            {awards.map(({ title, desc }) => (
-              <div key={title} className="award-card card">
-                <span className="award-icon">🏆</span>
-                <h3>{title}</h3>
-                <p>{desc}</p>
-              </div>
-            ))}
+          <p className="section-label">// how i work</p>
+          <div className="how-grid">
+            <div className="how-card card">
+              <h4>I own things end-to-end</h4>
+              <p>Database to deployment. I don't hand off at the API boundary — I want to understand the full system and take responsibility for how it behaves in production.</p>
+            </div>
+            <div className="how-card card">
+              <h4>I think in systems</h4>
+              <p>Being in architecture discussions early taught me to ask "why" before "how". Most bugs are design decisions made too fast.</p>
+            </div>
+            <div className="how-card card">
+              <h4>I take quality personally</h4>
+              <p>Three Rockstar of the Month awards and a Pinnacle Award didn't come from shipping fast — they came from caring about what gets shipped.</p>
+            </div>
           </div>
         </section>
 
-        {/* Professional Development */}
+        {/* ── Family ────────────────────────────────────── */}
         <section className="about-section">
-          <h2 className="sub-title">Professional <span>Development</span></h2>
-          <ul className="dev-list">
-            {development.map((item, i) => (
-              <li key={i} className="dev-item card">
-                <span className="dev-bullet" />
-                <p>{item}</p>
-              </li>
-            ))}
-          </ul>
-        </section>
-
-        {/* Languages */}
-        <section className="about-section">
-          <h2 className="sub-title">Languages <span>Spoken</span></h2>
-          <div className="languages-grid">
-            {languages.map(({ lang, level }) => (
-              <div key={lang} className="lang-card card">
-                <span className="lang-name">{lang}</span>
-                <span className="badge">{level}</span>
-              </div>
-            ))}
+          <p className="section-label">// family</p>
+          <div className="card about-card">
+            <p>
+              Family first — not as something I say, just how I'm wired. I'm a single child,
+              though a bunch of cousins would argue otherwise. Two of them I think about the most:
+              my sister, calm and beautiful in the most effortless way — now getting ready
+              to step into the IT world. And my little brother — a little warrior
+              with the kind of energy that makes him capable of absolutely anything.
+            </p>
           </div>
         </section>
+
+        {/* ── One more thing ────────────────────────────── */}
+        <section className="about-section">
+          <p className="section-label">// one more thing</p>
+          <div className="card about-card">
+            <p>
+              Languages are where my curiosity shows up most visibly. Not the grammar —
+              the moment a new pattern clicks and a connection opens up that wasn't there before.
+              I've picked up five so far, two of them while travelling over the last three years.
+              That pull toward learning something completely new and making more connections from it —
+              I don't think it ever turns off.
+            </p>
+          </div>
+        </section>
+
       </div>
     </main>
   );

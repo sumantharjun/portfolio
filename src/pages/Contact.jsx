@@ -14,6 +14,12 @@ const contacts = [
     href:  'https://www.linkedin.com/in/kolli-sumanth-84954b186/',
   },
   {
+    icon:  '🐙',
+    label: 'GitHub',
+    value: 'github.com/sumantharjun',
+    href:  'https://github.com/sumantharjun',
+  },
+  {
     icon:  '📱',
     label: 'Mobile',
     value: '+91 93473 07701',
@@ -28,14 +34,28 @@ export default function Contact() {
         <div className="page-header">
           <h1 className="section-title">Get In <span>Touch</span></h1>
           <div className="section-line" />
-          <p className="contact-subtitle">
-            Open to new opportunities and collaborations. Feel free to reach out!
+        </div>
+
+        <div className="contact-intro">
+          <p className="contact-headline">
+            Looking for a full-stack engineer who can own systems end-to-end and
+            bring real depth in AI?
+          </p>
+          <p className="contact-body">
+            I'm open to roles on <strong>Azure or AWS hosted applications</strong> where solid engineering
+            and AI compound each other. If that's what you're building — let's talk.
           </p>
         </div>
 
         <div className="contact-grid">
           {contacts.map(({ icon, label, value, href }) => (
-            <a key={label} href={href} target={href.startsWith('http') ? '_blank' : '_self'} rel="noreferrer" className="contact-card card">
+            <a
+              key={label}
+              href={href}
+              target={href.startsWith('http') ? '_blank' : '_self'}
+              rel="noreferrer"
+              className="contact-card card"
+            >
               <span className="contact-icon">{icon}</span>
               <div>
                 <p className="contact-label">{label}</p>
