@@ -45,7 +45,7 @@ export default function Navbar() {
 
         <NavLink to="/contact" className="nav-cta" onClick={() => setMenuOpen(false)}>
           <span className="nav-cta-dot" />
-          Open to Work
+          Open to Connect
         </NavLink>
 
         <button
