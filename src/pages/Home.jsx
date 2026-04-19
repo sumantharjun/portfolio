@@ -24,8 +24,8 @@ const featured = [
   },
   {
     title:  'Mock Test Generation',
-    desc:   'AI-assisted platform that auto-generates mock tests from textbook content. Python backend, Next.js frontend, Supabase.',
-    tags:   ['Python', 'AI', 'Next.js', 'Supabase'],
+    desc:   'AI-assisted platform that auto-generates mock tests from textbook content using LangChain to process and extract questions from raw text.',
+    tags:   ['Python', 'LangChain'],
     github: 'https://github.com/sumantharjun/MockTestGeneration',
   },
   {
