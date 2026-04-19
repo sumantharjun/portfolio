@@ -23,8 +23,8 @@ const projects = [
   },
   {
     title:  'Mock Test Generation',
-    desc:   'An AI-assisted platform that auto-generates mock tests from textbook content. Built with a Python backend and a Next.js frontend connected to Supabase.',
-    tags:   ['Python', 'Next.js', 'Supabase', 'AI', 'TypeScript'],
+    desc:   'An AI-assisted platform that auto-generates mock tests from textbook content using LangChain to process and extract questions from raw text.',
+    tags:   ['Python', 'LangChain'],
     github: 'https://github.com/sumantharjun/MockTestGeneration',
     live:   '',
   },

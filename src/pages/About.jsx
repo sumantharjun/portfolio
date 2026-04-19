@@ -59,7 +59,7 @@ export default function About() {
             <p>
               Family first — not as something I say, just how I'm wired. I'm a single child,
               though a bunch of cousins would argue otherwise. Two of them I think about the most:
-              my sister, calm and beautiful in the most effortless way — now getting ready
+              my sister, calm, beautiful, and hopefully smart — now getting ready
               to step into the IT world. And my little brother — a little warrior
               with the kind of energy that makes him capable of absolutely anything.
             </p>
